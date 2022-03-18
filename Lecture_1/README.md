@@ -4,7 +4,7 @@
 
 **Summary:** Modern applications of deep learning require the knowledge of
 Python, a high level language. In this lecture we go step by step through the
-basics of Python, Numpy, Matplotlib and Pandas.
+basics of Python.
 
 ## Exercise 1 - Environment preparation
 
@@ -118,54 +118,3 @@ Construct a class which constructs and evaluates a 1D polynomial model with the 
 - the class constructor must take the polynomial degree as argument.
 - implement a `set_parameters` and `get_parameters` methods to update the parameter list.
 - provide an `execute` method to access the polynomial prediction at a specific value in `x`.
-
-## Exercise 8 - Numpy basics
-
-Using the [NumPy documentation](https://numpy.org/) write a code which starting
-from a specific space dimension `N` allocates:
-- a random vector `v` of real double-precision (`numpy.float64`) of size `N`.
-- a random square matrix `A` with size `NxN`.
-- implement a function which performs the dot product using only python primitives.
-- measure the execution time of the previous function and compare with NumPy's `dot` method.
-- accelerate the python dot product using the [Numba](https://numba.pydata.org/) library.
-- compare the performance results.
-
-## Exercise 9 - Matplotlib basics
-
-Write a plotting script (or notebook) using
-[Matplotlib](https://matplotlib.org/) for the function `exp(-x) * cos(2*pi*x)`
-for 100 points in x linearly spaced from 0 to 5.
-
-## Exercise 10 - Pandas basics
-
-Pandas provides a easy and quick way to dataframe manipulation. e.g.:
-```python
-import pandas as pd
-
-s = pd.Series([1, 3, 5, np.nan, 6, 8])
-print(s)
-```
-another example
-```python
-dates = pd.date_range('20130101', periods=6)
-print(dates)
-
-df = pd.DataFrame(np.random.randn(6, 4), index=dates, columns=list('ABCD'))
-
-print(df)
-```
-
-- First download and import the following dataset using pandas:
-    ```python
-    url = 'http://archive.ics.uci.edu/ml/machine-learning-databases/auto-mpg/auto-mpg.data'
-    column_names = ['MPG', 'Cylinders', 'Displacement', 'Horsepower', 'Weight',
-                    'Acceleration', 'Model Year', 'Origin']
-
-    raw_dataset = pd.read_csv(url, names=column_names,
-                            na_values='?', comment='\t',
-                            sep=' ', skipinitialspace=True)
-    ```
-
-- Print the mean values of each column.
-
-- Filter results by selecting only entries where the number of cylinders is equal to 3.
