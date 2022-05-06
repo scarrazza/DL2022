@@ -8,11 +8,11 @@
 
 1. Download the CIFAR10 dataset using `tensorflow.keras.datasets.cifar10.load_data()`. This dataset contains 60k (50k training / 10k test) low resolution color images for 10 classes: `['airplane', 'automobile', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck']`.
 
-2. Verify the data by plotting samples of the images.
+2. Verify data by plotting image samples.
 
 3. Allocate a sequential model containing a normalization layer after determining the best choice for this particular dataset. After this initial normalization layer, threat images as a flatten layer, and build a classifier. Train the classifier using the test data as validation set. Store and plot the accuracy for the training and validation achieved with this approach.
 
-4. Redesign the previous model by replacing the initial flatten layer with convolutional layers (`tf.keras.layers.Conv2D`) followed by a Max Pooling 2D layer (`tf.keras.layers.MaxPooling2D`). Try this model with 3 consecutive layers.
+4. Redesign the previous model by replacing the initial flatten layer with convolutional layers (`tf.keras.layers.Conv2D`) followed by a Max Pooling 2D layer (`tf.keras.layers.MaxPooling2D`). Try this model with 3 consecutive layers. Compare the results with the previous model.
 
 ## Exercise 2: Localization and classification
 
